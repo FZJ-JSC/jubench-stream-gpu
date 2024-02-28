@@ -1,0 +1,3 @@
+[submodule "src/CUDA-Cpp-STREAM"]
+	path = src/CUDA-Cpp-STREAM
+	url = git@github.com:AndiH/CUDA-Cpp-STREAM.git
