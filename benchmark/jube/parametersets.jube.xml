@@ -3,11 +3,12 @@
     <parameterset name="sys_module_params">
         <!-- System (automated detection) -->
         <parameter name="system" mode="shell">cat /etc/FZJ/systemname | tr -d '\n'</parameter>
-        <!-- Stages (default 2023) -->
+        <!-- Stages (default 2024) -->
         <parameter name="stage" tag="s20">2020</parameter>
         <parameter name="stage" tag="s21">2021</parameter>
         <parameter name="stage" tag="s22">2022</parameter>
-        <parameter name="stage" tag="s23| !(s20|s21|s22)">2023</parameter>
+        <parameter name="stage" tag="s23">2023</parameter>
+        <parameter name="stage" tag="s24| !(s20|s21|s22|s23)">2024</parameter>
         <parameter name="modules" mode="python">"GCC CUDA"</parameter>
     </parameterset>
 
@@ -20,6 +21,7 @@
             "juwels": "sm_70",
             "juwelsbooster": "sm_80",
             "jurecadc": "sm_80",
+            "jedi": "sm_90",
             "jusuf": "sm_70"
         }["${system}"]
         </parameter>
@@ -42,6 +44,7 @@
             "juwels": "develgpus",
             "juwelsbooster": "develbooster",
             "jurecadc": "dc-gpu",
+            "jedi": "all",
             "jusuf": "develgpus"
         }["${system}"]
         </parameter>
